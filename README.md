@@ -20,7 +20,7 @@
 | Google Drive·Google OAuth | 새 사용자가 별도 생성 |
 | 비밀값 | service role, OAuth secret, OpenAI 키, password pepper는 공유 금지 |
 
-브라우저에 들어가는 publishable/anon key도 반드시 **새 Supabase 프로젝트의 값**으로 바꿉니다.
+브라우저에 들어가는 publishable/anon key와 Kakao JavaScript key도 반드시 **새 프로젝트의 값**으로 바꿉니다.
 
 ## 권장 전달 순서
 
@@ -82,7 +82,7 @@
    - `GOOGLE_DRIVE_CLIENT_SECRET`
 4. 하객 사진 관련 SQL과 Edge Function 배포
 
-Google OAuth redirect URI는 새 Supabase 프로젝트의 callback 주소여야 합니다. 기존 프로젝트의 Drive 폴더나 OAuth 설정을 재사용하지 않습니다.
+Google OAuth redirect URI는 새 Supabase 프로젝트의 callback 주소여야 합니다. 기존 프로젝트의 Drive 폴더나 OAuth 설정을 재사용하지 않습니다. `google-drive-oauth-callback` 함수를 쓴다면 새 공개 사이트 주소를 `SITE_ORIGIN` Edge Function Secret으로도 설정합니다.
 
 ## GitHub Pages 배포와 캐시
 

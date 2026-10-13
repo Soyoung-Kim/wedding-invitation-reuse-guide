@@ -1,0 +1,193 @@
+/* =========================================================
+   Responsive
+========================================================= */
+@media (max-width: 1024px) {
+  .nav-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* This invitation is designed mobile-first. Keep a stable invitation canvas on desktop. */
+@media (min-width: 769px) {
+  .page-shell {
+    width: min(560px, calc(100% - 48px));
+  }
+
+  .intro-media {
+    background:
+      radial-gradient(circle at center, rgba(255, 255, 255, 0.78), rgba(248, 243, 237, 0.96) 58%, #eee5dc 100%);
+  }
+
+  .intro-image {
+    width: min(560px, 100%);
+    height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .intro-copy {
+    width: min(560px, 100%);
+    margin: 0 auto;
+  }
+
+  .slider {
+    min-height: 0;
+  }
+
+  .slides {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-count {
+    display: inline-flex;
+    margin-left: 8px;
+    margin-top: 6px;
+    font-size: 0.76rem;
+  }
+
+  .gallery-more-btn {
+    width: 100%;
+  }
+  .page-shell {
+    width: min(100%, calc(100% - 16px));
+    padding-top: 16px;
+  }
+
+  .section,
+  .wedding-accounts,
+  .guestbook-section {
+    padding: 22px 16px;
+    border-radius: 24px;
+  }
+
+  .intro-sticky {
+    background: #f8f3ed;
+  }
+
+  .intro-media {
+    background: #f8f3ed;
+  }
+
+  .intro-image {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .intro-copy {
+    padding: 42px 18px 66px;
+  }
+
+  .intro-title {
+    font-size: clamp(2rem, 8.7vw, 2.8rem);
+  }
+
+  .intro-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .intro-countdown-wrap {
+    width: min(100%, 380px);
+  }
+
+  .intro-countdown-grid {
+    gap: 8px;
+  }
+
+  .intro-countdown-item {
+    padding: 2px 6px;
+  }
+
+  .account-list {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-actions {
+    flex-direction: column;
+  }
+
+  .primary-actions .button {
+    width: 100%;
+  }
+
+  .nav-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .guestbook-ai-row,
+  .guestbook-ai-results-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .guestbook-card-head {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .guestbook-actions {
+    flex-direction: column-reverse;
+  }
+
+  .guestbook-actions .button,
+  .guestbook-ai-row .button,
+  .account-copy-btn {
+    width: 100%;
+  }
+
+  .guestbook-ai-dialog {
+    width: calc(100% - 16px);
+    margin: 8px auto;
+    padding: 18px;
+    border-radius: 22px;
+    max-height: calc(100vh - 16px);
+  }
+
+  .footer {
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slides {
+    aspect-ratio: 4 / 5;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav-card {
+    min-height: 80px;
+    border-radius: 20px;
+    padding: 14px 10px;
+  }
+
+  .intro-countdown-item strong {
+    font-size: 1.85rem;
+  }
+
+  .intro-countdown-item span {
+    font-size: 0.68rem;
+  }
+
+  .intro-dday-text {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,138 @@
+/* =========================================================
+   Account section
+========================================================= */
+.wedding-accounts {
+  max-width: 960px;
+  margin: 26px auto 0;
+  padding: 38px 22px 28px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(181, 153, 132, 0.10);
+  box-shadow: 0 20px 48px rgba(73, 55, 40, 0.08);
+}
+
+.wedding-accounts .section-heading { text-align: left; }
+
+.wedding-accounts .section-description {
+  max-width: 300px;
+  margin: 10px 0 24px;
+  line-height: 1.7;
+}
+
+.account-list {
+  display: grid;
+  gap: 12px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.directory-group {
+  overflow: hidden;
+  border: 1px solid rgba(120, 120, 160, 0.18);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.directory-group-groom {
+  border-color: rgba(108, 132, 178, 0.28);
+}
+
+.directory-group-bride {
+  border-color: rgba(181, 124, 151, 0.28);
+}
+
+.directory-toggle {
+  width: 100%;
+  min-height: 62px;
+  padding: 0 20px;
+  border: 0;
+  background: transparent;
+  color: #4b3f37;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.directory-toggle-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.directory-group-groom .directory-toggle-title { color: #667fae; }
+.directory-group-bride .directory-toggle-title { color: #b47b94; }
+
+.directory-toggle-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.directory-toggle[aria-expanded='true'] .directory-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.directory-panel {
+  padding: 0 14px 14px;
+  border-top: 1px solid rgba(120, 120, 160, 0.14);
+}
+
+.directory-card-list {
+  display: grid;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.directory-panel .contact-card,
+.directory-panel .account-card {
+  box-shadow: none;
+}
+
+.account-card {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(120, 120, 160, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.account-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.account-card-head h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #4b3f37;
+}
+
+.account-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: transparent;
+  color: #8a7568;
+}
+
+.account-bank-number {
+  margin: 0 0 12px;
+  color: #6d5f55;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+}
+
+.account-copy-btn {
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  box-shadow: none;
+}

@@ -1,0 +1,196 @@
+/* =========================================================
+   Opening invitation cover
+========================================================= */
+.invitation-cover {
+  --cover-stage-height: 112svh;
+  position: relative;
+  min-height: var(--cover-stage-height);
+  overflow: hidden;
+  overflow: clip;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(229, 192, 196, 0.28), transparent 26%),
+    radial-gradient(circle at 88% 78%, rgba(206, 189, 156, 0.24), transparent 29%),
+    #fbf8f3;
+}
+
+.invitation-cover::before,
+.invitation-cover::after {
+  content: '';
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(179, 148, 119, 0.18);
+  border-radius: 48% 52% 50% 50%;
+  pointer-events: none;
+}
+
+.floating-utilities {
+  position: fixed;
+  z-index: 1200;
+  right: 16px;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  display: grid;
+  gap: 8px;
+}
+
+.text-size-toggle,
+.utility-scroll-button {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid rgba(145, 113, 89, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 253, 250, 0.90);
+  color: #765d4c;
+  box-shadow: 0 7px 18px rgba(96, 71, 54, 0.08);
+  display: grid;
+  place-items: center;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.text-size-toggle > span {
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.text-size-toggle[aria-pressed='true'] {
+  border-color: #a27b60;
+  background: #a78365;
+  color: #fff;
+}
+
+.utility-scroll-button {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.invitation-cover::before { top: -96px; left: -106px; transform: rotate(30deg); }
+.invitation-cover::after { right: -112px; bottom: -92px; transform: rotate(-26deg); }
+
+.invitation-cover-inner {
+  position: relative;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  width: min(430px, 100%);
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: 28px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+.cover-kicker {
+  margin: 0 0 7px;
+  color: #9c7b63;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.cover-title {
+  margin: 0 0 18px;
+  color: #473b34;
+  font-family: Pretendard, sans-serif;
+  font-size: 1.34rem;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+.cover-event-details {
+  margin: 0 0 16px;
+  color: #bd9255;
+  text-align: center;
+}
+
+.cover-date {
+  margin: 0 0 10px;
+  font-family: Pretendard, system-ui, sans-serif;
+  font-size: clamp(1.92rem, 6.7vw, 2.4rem);
+  font-weight: 500;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.cover-names {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  font-family: Pretendard, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.07em;
+}
+
+.cover-names span { display: block; }
+
+.cover-venue {
+  margin: 11px 0 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+}
+
+.cover-illustration-frame {
+  overflow: hidden;
+  border: 1px solid rgba(176, 145, 116, 0.18);
+  border-radius: 24px;
+  background: #fffdfb;
+  box-shadow: 0 18px 40px rgba(100, 76, 58, 0.11);
+}
+
+.cover-illustration-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 42svh;
+  object-fit: contain;
+  object-position: center;
+}
+
+.cover-countdown {
+  margin-top: 16px;
+  background: rgba(255, 253, 250, 0.94);
+}
+
+.cover-scroll-hint {
+  margin: 17px 0 0;
+  color: #9d8775;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.cover-ornament {
+  position: absolute;
+  z-index: 1;
+  color: rgba(186, 139, 152, 0.35);
+  font-family: 'Cormorant Garamond', serif;
+  pointer-events: none;
+}
+
+.cover-ornament-left { top: 15%; left: 7%; font-size: 2.2rem; }
+.cover-ornament-right { right: 8%; bottom: 18%; font-size: 2.5rem; }
+
+html.is-large-text .invitation-cover {
+  --cover-stage-height: 132svh;
+}
+
+html.is-large-text .cover-illustration-frame img {
+  max-height: 32svh;
+}
+
+@media (max-width: 480px) {
+  .invitation-cover-inner { padding: 26px 18px 22px; }
+  .cover-illustration-frame img { max-height: 40svh; }
+}

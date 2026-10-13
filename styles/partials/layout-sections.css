@@ -1,0 +1,71 @@
+/* =========================================================
+   Page shell / generic sections
+========================================================= */
+.page-shell {
+  width: min(1080px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 28px 0 72px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.section {
+  margin: 32px 0;
+  padding: 28px 22px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.80);
+  border: 1px solid rgba(181, 153, 132, 0.12);
+  box-shadow: 0 14px 38px rgba(73, 55, 40, 0.06);
+}
+
+.section-heading,
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-heading .section-kicker,
+.section-header .section-kicker {
+  margin: 0 0 6px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9a7f6b;
+}
+
+.section-heading h2,
+.section-header h2 {
+  margin: 0;
+  font-family: Pretendard, sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  color: #4b3f37;
+}
+
+.section-description {
+  margin: 10px 0 0;
+  color: #74685e;
+  line-height: 1.7;
+}
+
+/* Invitation information blocks: visually separate lower-page sections. */
+.contact-section,
+.wedding-accounts,
+.invitation-panel {
+  position: relative;
+}
+
+.contact-section::before,
+.wedding-accounts::before,
+.invitation-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 22px;
+  width: 46px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d5b595, #b99371);
+  transform: none;
+}

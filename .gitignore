@@ -3,6 +3,9 @@
 .spago
 bower_components
 node_modules
+.env
+.env.*
+supabase/.temp/
 
 # Generated files
 .psci

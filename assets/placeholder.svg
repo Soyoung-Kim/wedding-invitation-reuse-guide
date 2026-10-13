@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+  <title id="title">사진을 추가해 주세요</title>
+  <desc id="description">청첩장 템플릿의 사진 자리 표시자</desc>
+  <rect width="1200" height="800" fill="#f7f0ea"/>
+  <path d="M360 530l150-170 120 120 110-145 180 195H360z" fill="#d8b9a1" opacity=".72"/>
+  <circle cx="515" cy="275" r="54" fill="#c99f82" opacity=".7"/>
+  <text x="600" y="650" text-anchor="middle" fill="#7f6554" font-family="sans-serif" font-size="34">사진을 추가해 주세요</text>
+</svg>

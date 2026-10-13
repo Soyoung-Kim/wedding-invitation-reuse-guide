@@ -1,0 +1,182 @@
+/* =========================================================
+   Details / Location
+========================================================= */
+.detail-list {
+  display: grid;
+  gap: 14px;
+}
+
+.detail-item {
+  padding: 18px 18px 16px;
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid rgba(181, 153, 132, 0.10);
+  box-shadow: 0 12px 26px rgba(79, 61, 48, 0.06);
+}
+
+.detail-label {
+  display: inline-flex;
+  margin-bottom: 8px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a28573;
+}
+
+.detail-item p {
+  margin: 0;
+  color: #50453e;
+  font-weight: 600;
+}
+
+.address-copy-button {
+  margin-top: 12px;
+  padding: 7px 10px;
+  border: 1px solid rgba(162, 133, 115, 0.26);
+  border-radius: 999px;
+  background: #fffdfb;
+  color: #806957;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rough-map {
+  margin: 26px 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(181, 153, 132, 0.14);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(79, 61, 48, 0.06);
+  cursor: zoom-in;
+}
+
+.rough-map img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rough-map figcaption {
+  padding: 10px 14px;
+  color: #806e62;
+  font-size: 0.76rem;
+  text-align: center;
+}
+
+.map-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1600;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 70px 18px 24px;
+  background: rgba(20, 16, 19, 0.92);
+}
+
+.map-lightbox-viewport {
+  min-height: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  touch-action: none;
+}
+
+.map-lightbox-viewport img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform-origin: center;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.map-lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.map-lightbox-hint {
+  margin: 14px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  text-align: center;
+}
+
+.transit-info {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.transit-card {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 15px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(181, 153, 132, 0.12);
+}
+
+.transit-label {
+  color: #9b7b65;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.transit-card p {
+  margin: 0;
+  color: #554941;
+  font-size: 0.88rem;
+  line-height: 1.72;
+}
+
+.flower-notice {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 22px;
+  padding: 17px 18px;
+  border: 1px solid rgba(181, 153, 132, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 252, 248, 0.72);
+  color: #6d5d52;
+}
+
+.flower-notice-icon {
+  flex: 0 0 auto;
+  padding-top: 2px;
+  color: #b08b72;
+  font-size: 1.05rem;
+}
+
+.flower-notice p { margin: 0; }
+
+.flower-notice-title {
+  margin-bottom: 4px !important;
+  color: #987660;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.flower-notice div > p:last-child {
+  font-size: 0.88rem;
+  line-height: 1.72;
+}
